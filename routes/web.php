@@ -43,3 +43,12 @@ Route::delete('/pelanggan/{pelanggan}', 'App\Http\Controllers\PelangganControlle
 
 //paket perawatan
 Route::get('/paket', 'App\Http\Controllers\PaketController@index');
+Route::post('/paket/tambah', 'App\Http\Controllers\PaketController@store');
+Route::get('/paket/{paket}/info', 'App\Http\Controllers\PaketController@show');
+Route::get('/paket/{paket}/edit', 'App\Http\Controllers\PaketController@edit');
+Route::put('/paket/{paket}', 'App\Http\Controllers\PaketController@update');
+Route::delete('/paket/{paket}', 'App\Http\Controllers\PaketController@destroy');
+
+
+//boking
+Route::get('/boking', 'App\Http\Controllers\BokingController@index');
